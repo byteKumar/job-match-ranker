@@ -14,7 +14,5 @@ indexes/
 *.parquet
 *.npy
 
-# Hand-check sheet contains dataset text; only the agreement summary is committed
-data/handcheck/*.csv
 
 .DS_Store

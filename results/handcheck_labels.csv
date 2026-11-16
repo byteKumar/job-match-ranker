@@ -1,0 +1,101 @@
+pair_id,resume_id,job_id,human_grade,reason
+1,27080812,3693071185,1,Digital product strategy leader not a hands-on UX designer
+2,27080812,3694117805,0,Marketing tech executive vs art auction business leadership
+3,33344933,3757452141,0,English teacher vs automotive tooling design
+4,24508725,3757700564,0,HR generalist vs event planning logistics
+5,15535920,3693590087,0,Business consultant vs diesel mechanic
+6,50219114,3693045259,0,Web strategy manager vs C/AIX software engineering manager
+7,20457611,3699057241,0,Fitness instructor vs registered nurse
+8,26046064,3755106397,2,Experienced graphic designer for graphic designer role
+9,17681064,3749379016,1,IT management and vendor sourcing vs hands-on cloud engineering
+10,12526702,3693047189,0,Electrical quality engineer vs SEO marketing intern
+11,34151183,3757483878,0,Cashier receptionist vs registered nurse
+12,22990761,3699062038,0,Patient care tech vs retail sales
+13,98559931,3693045657,2,Payroll accountant with bookkeeping and office admin experience
+14,18885231,3757453419,1,Membership sales associate vs B2B construction account sales
+15,91121135,3693589270,0,Administrative assistant vs corporate communications manager
+16,36727173,3699085141,0,Military supply specialist vs biomedical equipment technician
+17,91189201,3754509478,1,Product marketing consultant vs construction management business development
+18,17812897,3755589640,2,HR manager for HR business partner role
+19,25926667,3756136034,1,Education program management vs instructional design
+20,23387174,3701196939,2,Accountant for controller role same field
+21,94047639,3694105773,0,Line chef vs bank branch manager
+22,18586076,3757481931,0,Dance therapist educator vs piping designer
+23,31243710,3699083310,1,Network admin IT manager vs cyber range support
+24,43311839,3693599396,0,.NET developer vs 3D character animator
+25,21868149,3755582902,0,Agricultural project assistant vs automotive digital marketing sales
+26,14667957,3693048722,0,Nurse vs semiconductor industrial hygiene engineering
+27,22615491,3693045295,1,Economics finance grad with cashier work vs credit analyst
+28,27888251,3757475807,0,Water resources specialist vs ICU nurse
+29,24590489,3754984439,0,Billing associate vs social media manager
+30,29521434,3749906202,0,Cashier kennel attendant vs instructional designer
+31,24740005,3756150130,1,Construction management assistant with materials testing vs civil engineer
+32,29595906,3699059188,0,Laborer vs litigation claims adjuster
+33,18457785,3757480481,0,IT project manager vs project accountant
+34,15083600,3693071189,0,Capital markets analyst vs theater upsell staff
+35,38355831,3749389357,2,Aviation technician for aircraft mechanic role
+36,27710853,3701301177,1,BPO account management vs managed care contracting consulting
+37,28975482,3757450277,0,Salon operations manager vs B2B demand generation director
+38,18885767,3701198927,0,Theater director vs Exadata database admin
+39,17021141,3749905392,2,Patient financial advocate supervisor fits patient access
+40,31602598,3755578328,1,Accountant vs wealth advisor finance related
+41,91121135,3756111846,0,Administrative assistant vs wireless field test engineer
+42,37402097,3693597642,2,Preschool teacher fits preschool teacher aide
+43,25719936,3697376746,1,Electrical engineer vs medical device quality engineer
+44,29975124,3757463623,0,IT utility systems consultant vs substation electrical engineer
+45,18885231,3756146871,0,Sales associate vs tax intern
+46,98965485,3749349069,0,Banking marketing director vs network administrator
+47,23771896,3749347294,1,PR officer vs influencer marketing though posting describes HR
+48,57601040,3757483804,0,Supply chain consultant vs investment banking associate
+49,51588273,3757462949,0,Software engineering manager vs customer service rep
+50,19929506,3757486551,0,Events PR coordinator vs English teacher
+51,29998869,3693583871,0,Finance director vs SAP ECM applications consultant
+52,19179079,3756105052,0,Recruiter vs apartment leasing consultant
+53,29595906,3757735107,0,Laborer vs finance manager
+54,15083600,3757740072,1,Financial business analyst vs strategic finance leadership
+55,31162167,3697394237,0,PR intern vs customer service associate
+56,20001721,3757727889,1,IT student DBA vs signal processing software developer
+57,18885231,3693050826,0,Sales associate vs aviation records clerk
+58,90318913,3694106625,1,Plant mechanical engineer vs aircraft mechanic
+59,23841877,3693041989,2,Bistro chef for executive chef role
+60,10289113,3693056082,2,Business development director for business development lead
+61,29926588,3693048322,1,Guardian ad litem advocate BA vs paralegal
+62,23985183,3700549399,0,Military operations manager vs FAA certification engineer
+63,60182829,3757489736,0,Government finance executive vs associate recruiter
+64,38115035,3701308973,0,Medical billing vs graphic designer
+65,12021752,3693047755,2,Outside sales professional fits business development sales role
+66,11943065,3755596339,2,Certified classroom teacher fits learning center teacher
+67,26160200,3694102293,0,Digital marketing client services vs game production artist
+68,29595906,3749351189,1,Laborer with parts inventory vs aircraft parts inventory clerk
+69,37931076,3757724953,1,Dealership finance admin vs FP&A analyst stretch
+70,21756639,3757705173,0,Marketing manager vs loan processing manager
+71,25224998,3697381142,1,Equipment operator trainer vs construction superintendent
+72,34792238,3757490140,0,Fitness wellness director without nursing license vs RN
+73,91153752,3693071185,2,UX UI designer for UX designer role
+74,26819872,3693068332,0,Aviation supply specialist vs CRM engineer
+75,17325147,3693046340,0,Expressive arts program leader vs 3D artist
+76,15499825,3749346559,0,Health information clerk vs health insurance underwriter
+77,72652441,3757472029,0,Claims customer care advocate vs licensed litigation attorney
+78,25330083,3693047224,2,Budget finance specialist fits finance director field
+79,88859947,3755592292,0,Construction manager vs school teacher
+80,91026230,3757736046,0,Sales marketing cofounder vs teacher aide
+81,58105060,3757488552,0,Math teacher vs barre fitness instructor
+82,91116867,3755584771,0,Cosmetics consultant vs enterprise business development director
+83,57706851,3749352195,0,NOC engineer vs retail customer service manager
+84,32977530,3701305982,1,HR clerk vs senior recruiter
+85,22990761,3699432400,0,Patient care tech vs flight dispatcher
+86,25694422,3756114683,0,Substance abuse counselor vs SaaS solution consultant
+87,51724595,3699082856,0,CRM implementation consultant vs industrial business development
+88,22720697,3694116848,0,Accounting specialist vs health insurance sales
+89,24103168,3757463780,0,Financial accountant vs defense attorney
+90,85417107,3749903937,0,Recruiting manager vs automotive mechanic
+91,15083600,3757765017,0,Capital markets analyst vs web marketing
+92,87635012,3749352195,0,Principal accountant vs retail customer service manager
+93,13879043,3757743389,0,HR consultant vs health economics consulting
+94,10265057,3749900667,2,RF hardware engineer fits EMI electrical engineer
+95,22968380,3699099855,1,K-6 teacher vs university educational psychology instructor
+96,19936735,3757380008,1,Media sales broadcast manager vs event sales manager
+97,33023370,3699059369,0,Welder fabricator vs plastics design engineer
+98,37242217,3757704469,0,IT systems consultant vs RF DAS engineer
+99,23918545,3693047624,0,Medical claims specialist vs business development manager
+100,19243556,3757740072,2,Finance director controller fits strategic finance head
