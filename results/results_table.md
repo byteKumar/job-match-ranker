@@ -4,3 +4,5 @@
 | random | 0.058 | 0.122 | 0.053 | chance level, seed 0 |
 | keyword | 0.253 | 0.366 | 0.177 |  |
 | bm25 | 0.277 | 0.369 | 0.200 |  |
+| biencoder_raw | 0.419 | 0.539 | 0.313 | ablation: raw full text, truncated at 256 tokens |
+| biencoder | 0.427 | 0.543 | 0.280 | section-aware text (title, skills, summary, experience) |
