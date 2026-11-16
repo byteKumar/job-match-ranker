@@ -1,0 +1,350 @@
+{
+  "mean": {
+    "ndcg@10": 0.05751282339048114,
+    "mrr": 0.12204175998062639,
+    "recall@50": 0.05260416666666665
+  },
+  "per_query": [
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.045454545454545456,
+      "recall@50": 0.075,
+      "resume_id": "93002334",
+      "category": "HR"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.09090909090909091,
+      "recall@50": 0.05,
+      "resume_id": "24508725",
+      "category": "HR"
+    },
+    {
+      "ndcg@10": 0.023143740645592423,
+      "mrr": 0.02857142857142857,
+      "recall@50": 0.05,
+      "resume_id": "11807040",
+      "category": "DESIGNER"
+    },
+    {
+      "ndcg@10": 0.031596121456516926,
+      "mrr": 0.03571428571428571,
+      "recall@50": 0.025,
+      "resume_id": "91153752",
+      "category": "DESIGNER"
+    },
+    {
+      "ndcg@10": 0.028381039213873666,
+      "mrr": 0.07692307692307693,
+      "recall@50": 0.075,
+      "resume_id": "91121135",
+      "category": "INFORMATION-TECHNOLOGY"
+    },
+    {
+      "ndcg@10": 0.028381039213873666,
+      "mrr": 0.06666666666666667,
+      "recall@50": 0.075,
+      "resume_id": "27295996",
+      "category": "INFORMATION-TECHNOLOGY"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.09090909090909091,
+      "recall@50": 0.025,
+      "resume_id": "27531694",
+      "category": "TEACHER"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.09090909090909091,
+      "recall@50": 0.075,
+      "resume_id": "11943065",
+      "category": "TEACHER"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.02857142857142857,
+      "recall@50": 0.05,
+      "resume_id": "24754689",
+      "category": "ADVOCATE"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.04,
+      "recall@50": 0.05,
+      "resume_id": "17165107",
+      "category": "ADVOCATE"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.06666666666666667,
+      "recall@50": 0.05,
+      "resume_id": "10289113",
+      "category": "BUSINESS-DEVELOPMENT"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.007142857142857143,
+      "recall@50": 0.0,
+      "resume_id": "67501448",
+      "category": "BUSINESS-DEVELOPMENT"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.02857142857142857,
+      "recall@50": 0.025,
+      "resume_id": "41910253",
+      "category": "HEALTHCARE"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.03333333333333333,
+      "recall@50": 0.075,
+      "resume_id": "26908066",
+      "category": "HEALTHCARE"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.008264462809917356,
+      "recall@50": 0.0,
+      "resume_id": "24251588",
+      "category": "FITNESS"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.07692307692307693,
+      "recall@50": 0.14285714285714285,
+      "resume_id": "12923795",
+      "category": "FITNESS"
+    },
+    {
+      "ndcg@10": 0.13886244387355454,
+      "mrr": 0.5,
+      "recall@50": 0.08333333333333333,
+      "resume_id": "21868149",
+      "category": "AGRICULTURE"
+    },
+    {
+      "ndcg@10": 0.09478836436955079,
+      "mrr": 0.25,
+      "recall@50": 0.16666666666666666,
+      "resume_id": "15546686",
+      "category": "AGRICULTURE"
+    },
+    {
+      "ndcg@10": 0.052835679913660345,
+      "mrr": 0.011904761904761904,
+      "recall@50": 0.0,
+      "resume_id": "57706851",
+      "category": "BPO"
+    },
+    {
+      "ndcg@10": 0.17318663334822615,
+      "mrr": 0.25,
+      "recall@50": 0.1,
+      "resume_id": "27710853",
+      "category": "BPO"
+    },
+    {
+      "ndcg@10": 0.1176487194144654,
+      "mrr": 0.03125,
+      "recall@50": 0.025,
+      "resume_id": "22319662",
+      "category": "SALES"
+    },
+    {
+      "ndcg@10": 0.16354138662029633,
+      "mrr": 0.2,
+      "recall@50": 0.1,
+      "resume_id": "18885231",
+      "category": "SALES"
+    },
+    {
+      "ndcg@10": 0.028381039213873666,
+      "mrr": 0.015384615384615385,
+      "recall@50": 0.0,
+      "resume_id": "91116867",
+      "category": "CONSULTANT"
+    },
+    {
+      "ndcg@10": 0.1196514033905449,
+      "mrr": 0.03225806451612903,
+      "recall@50": 0.05,
+      "resume_id": "15083600",
+      "category": "CONSULTANT"
+    },
+    {
+      "ndcg@10": 0.026132756326225113,
+      "mrr": 0.05263157894736842,
+      "recall@50": 0.025,
+      "resume_id": "27080812",
+      "category": "DIGITAL-MEDIA"
+    },
+    {
+      "ndcg@10": 0.06943122193677727,
+      "mrr": 0.0625,
+      "recall@50": 0.05,
+      "resume_id": "59011090",
+      "category": "DIGITAL-MEDIA"
+    },
+    {
+      "ndcg@10": 0.06943122193677727,
+      "mrr": 0.125,
+      "recall@50": 0.075,
+      "resume_id": "18448085",
+      "category": "AUTOMOBILE"
+    },
+    {
+      "ndcg@10": 0.13239739828780056,
+      "mrr": 0.05,
+      "recall@50": 0.05,
+      "resume_id": "22946204",
+      "category": "AUTOMOBILE"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.03333333333333333,
+      "recall@50": 0.05,
+      "resume_id": "23841877",
+      "category": "CHEF"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.09090909090909091,
+      "recall@50": 0.05,
+      "resume_id": "94047639",
+      "category": "CHEF"
+    },
+    {
+      "ndcg@10": 0.10154200962426777,
+      "mrr": 0.16666666666666666,
+      "recall@50": 0.05,
+      "resume_id": "86595128",
+      "category": "FINANCE"
+    },
+    {
+      "ndcg@10": 0.3439214687627769,
+      "mrr": 1.0,
+      "recall@50": 0.05,
+      "resume_id": "19243556",
+      "category": "FINANCE"
+    },
+    {
+      "ndcg@10": 0.05046578036533668,
+      "mrr": 0.041666666666666664,
+      "recall@50": 0.03571428571428571,
+      "resume_id": "29521434",
+      "category": "APPAREL"
+    },
+    {
+      "ndcg@10": 0.046287481291184845,
+      "mrr": 0.07692307692307693,
+      "recall@50": 0.07142857142857142,
+      "resume_id": "10876132",
+      "category": "APPAREL"
+    },
+    {
+      "ndcg@10": 0.04927649697181754,
+      "mrr": 0.014492753623188406,
+      "recall@50": 0.0,
+      "resume_id": "51588273",
+      "category": "ENGINEERING"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.018867924528301886,
+      "recall@50": 0.0,
+      "resume_id": "31694970",
+      "category": "ENGINEERING"
+    },
+    {
+      "ndcg@10": 0.022084741151463014,
+      "mrr": 0.0625,
+      "recall@50": 0.05,
+      "resume_id": "31602598",
+      "category": "ACCOUNTANT"
+    },
+    {
+      "ndcg@10": 0.06625422345438904,
+      "mrr": 0.1111111111111111,
+      "recall@50": 0.05,
+      "resume_id": "87635012",
+      "category": "ACCOUNTANT"
+    },
+    {
+      "ndcg@10": 0.09478836436955079,
+      "mrr": 0.25,
+      "recall@50": 0.075,
+      "resume_id": "25224998",
+      "category": "CONSTRUCTION"
+    },
+    {
+      "ndcg@10": 0.16006937327320508,
+      "mrr": 0.5,
+      "recall@50": 0.05,
+      "resume_id": "33023370",
+      "category": "CONSTRUCTION"
+    },
+    {
+      "ndcg@10": 0.0636207881989517,
+      "mrr": 0.1,
+      "recall@50": 0.075,
+      "resume_id": "24590489",
+      "category": "PUBLIC-RELATIONS"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.012195121951219513,
+      "recall@50": 0.0,
+      "resume_id": "28975482",
+      "category": "PUBLIC-RELATIONS"
+    },
+    {
+      "ndcg@10": 0.09478836436955079,
+      "mrr": 0.25,
+      "recall@50": 0.05,
+      "resume_id": "12021752",
+      "category": "BANKING"
+    },
+    {
+      "ndcg@10": 0.11665559265047365,
+      "mrr": 0.14285714285714285,
+      "recall@50": 0.075,
+      "resume_id": "18457785",
+      "category": "BANKING"
+    },
+    {
+      "ndcg@10": 0.024454640699786683,
+      "mrr": 0.03225806451612903,
+      "recall@50": 0.05,
+      "resume_id": "18885767",
+      "category": "ARTS"
+    },
+    {
+      "ndcg@10": 0.0,
+      "mrr": 0.043478260869565216,
+      "recall@50": 0.1,
+      "resume_id": "32794700",
+      "category": "ARTS"
+    },
+    {
+      "ndcg@10": 0.20248323207250624,
+      "mrr": 0.5,
+      "recall@50": 0.075,
+      "resume_id": "22990761",
+      "category": "AVIATION"
+    },
+    {
+      "ndcg@10": 0.026132756326225113,
+      "mrr": 0.014285714285714285,
+      "recall@50": 0.0,
+      "resume_id": "29595906",
+      "category": "AVIATION"
+    }
+  ],
+  "note": "chance level, seed 0",
+  "seconds": 0.0,
+  "n_queries": 48,
+  "n_corpus": 894,
+  "python": "3.12.10"
+}
