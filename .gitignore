@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data, models, indexes (never committed)
+data/raw/
+data/processed/
+models/
+indexes/
+.hf-cache/
+*.faiss
+*.parquet
+*.npy
+
+# Hand-check sheet contains dataset text; only the agreement summary is committed
+data/handcheck/*.csv
+
+.DS_Store
