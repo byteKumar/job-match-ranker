@@ -1,0 +1,75 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HF_HOME: ${{ github.workspace }}/.hf-cache
+      JOBMATCH_STRICT_TESTS: "1"   # tests/conftest.py: any skipped test fails the run
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      # CPU-only torch wheel first (the default Linux wheel pulls in several GB of CUDA libs);
+      # 2.15.0+cpu satisfies the torch==2.15.0 pin in requirements.txt.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+          python -c "import torch, faiss; print('torch', torch.__version__, 'cuda', torch.cuda.is_available(), 'faiss', faiss.__version__)"
+
+      # Raw datasets (~56 MB + ~135 MB), same sources as the README; not committed.
+      - name: Cache raw data
+        id: data-cache
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-data-v1
+      - name: Download raw data
+        if: steps.data-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p data/raw/resumes data/raw/jobs
+          curl -fsSL -o data/raw/resumes/Resume.csv https://huggingface.co/datasets/opensporks/resumes/resolve/main/Resume/Resume.csv
+          curl -fsSL -o data/raw/jobs/job_postings.csv https://huggingface.co/datasets/xanderios/linkedin-job-postings/resolve/main/job_postings.csv
+
+      # Only the bi-encoder (~91 MB) is needed by the tests; the service test points the
+      # re-ranker at a missing path on purpose to check the 503.
+      - name: Cache bi-encoder model
+        uses: actions/cache@v4
+        with:
+          path: .hf-cache
+          key: hf-all-MiniLM-L6-v2-v1
+      - name: Download bi-encoder model
+        run: python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
+
+      - name: Build labeled sets
+        run: python scripts/prepare_data.py > /dev/null
+
+      # The evaluation set must come out the same on Linux as on the Mac it was built on.
+      - name: Check dataset stats match the committed ones
+        run: |
+          git show HEAD:results/dataset_stats.json > /tmp/committed_stats.json
+          python - <<'PY'
+          import json
+          a = json.load(open("/tmp/committed_stats.json")); b = json.load(open("results/dataset_stats.json"))
+          a.pop("seconds"); b.pop("seconds")
+          diff = {k: (a.get(k), b.get(k)) for k in a.keys() | b.keys() if a.get(k) != b.get(k)}
+          assert not diff, diff
+          print("dataset_stats.json matches the committed file")
+          PY
+
+      - name: Run tests
+        run: python -m pytest -v -rs
