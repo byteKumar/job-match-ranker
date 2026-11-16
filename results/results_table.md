@@ -6,3 +6,5 @@
 | bm25 | 0.277 | 0.369 | 0.200 |  |
 | biencoder_raw | 0.419 | 0.539 | 0.313 | ablation: raw full text, truncated at 256 tokens |
 | biencoder | 0.427 | 0.543 | 0.280 | section-aware text (title, skills, summary, experience) |
+| biencoder_rerank | 0.319 | 0.365 | 0.280 | pretrained ms-marco-MiniLM-L6-v2 cross-encoder on bi-encoder top 50 |
+| finetuned | 0.316 ± 0.002 | 0.378 ± 0.004 | 0.280 ± 0.000 | fine-tuned on 300 train pairs; mean ± std over seeds [0, 1, 2] |

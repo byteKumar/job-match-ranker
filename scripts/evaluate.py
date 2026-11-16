@@ -84,6 +84,30 @@ def run_biencoder_rerank(es):
     return s, {**info, "note": "pretrained ms-marco-MiniLM-L6-v2 cross-encoder on bi-encoder top 50"}
 
 
+SEEDS = (0, 1, 2)
+
+
+def run_finetuned(es):
+    """Fine-tuned cross-encoder, one run per seed; reported as mean +/- sample std (ddof=1)."""
+    runs, info = [], {}
+    for seed in SEEDS:
+        path = str(ROOT / "models" / f"ce_seed{seed}")
+        scores, info = rerank_scores(es, path)
+        runs.append(evaluate(scores, es.grades))
+    keys = ("ndcg@10", "mrr", "recall@50")
+    per_seed = [r["mean"] for r in runs]
+    info.update(
+        per_seed={str(s): m for s, m in zip(SEEDS, per_seed)},
+        std={k: float(np.std([m[k] for m in per_seed], ddof=1)) for k in keys},
+        note=f"fine-tuned on 300 train pairs; mean ± std over seeds {list(SEEDS)}",
+        reranker="models/ce_seed{0,1,2}",
+    )
+    # Per-query metrics averaged over the seeds (used for error analysis).
+    pq = [{k: float(np.mean([r["per_query"][i][k] for r in runs])) for k in keys} for i in range(len(es.queries))]
+    return {"_precomputed": {"mean": {k: float(np.mean([m[k] for m in per_seed])) for k in keys},
+                             "per_query": pq}}, info
+
+
 def run_random(es):
     import numpy as np
     rng = np.random.default_rng(0)
@@ -92,7 +116,7 @@ def run_random(es):
 
 MODELS = {"random": run_random, "keyword": run_keyword, "bm25": run_bm25,
           "biencoder": run_biencoder, "biencoder_raw": run_biencoder_raw,
-          "biencoder_rerank": run_biencoder_rerank}
+          "biencoder_rerank": run_biencoder_rerank, "finetuned": run_finetuned}
 
 
 def write_table() -> None:
@@ -128,7 +152,7 @@ def main() -> None:
     for name in args.models:
         t0 = time.perf_counter()
         scores, extra = MODELS[name](es)
-        res = evaluate(scores, es.grades)
+        res = scores["_precomputed"] if isinstance(scores, dict) else evaluate(scores, es.grades)
         extra["seconds"] = round(time.perf_counter() - t0, 2)
         save(name, res, es, extra)
         print(name, {k: round(v, 4) for k, v in res["mean"].items()}, f"{extra['seconds']}s")

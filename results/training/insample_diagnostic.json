@@ -1,0 +1,6 @@
+{
+  "what": "Spearman correlation between model score and weak grade on the 300 TRAIN pairs (in-sample; no test data used). Run once after training, to rule out a pipeline bug.",
+  "bi_encoder_cosine": {"spearman": 0.414, "mean_score_by_grade_0_1_2": [0.28, 0.36, 0.408]},
+  "pretrained_cross_encoder": {"spearman": 0.229, "mean_score_by_grade_0_1_2": [-6.901, -6.073, -5.613]},
+  "finetuned_cross_encoder_seed0": {"spearman": 0.427, "mean_score_by_grade_0_1_2": [-0.476, 0.034, 0.522]}
+}
