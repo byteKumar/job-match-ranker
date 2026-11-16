@@ -34,7 +34,7 @@ jobs:
       # Raw datasets (~56 MB + ~135 MB), same sources as the README; not committed.
       - name: Cache raw data
         id: data-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: data/raw
           key: raw-data-v1
@@ -48,7 +48,7 @@ jobs:
       # Only the bi-encoder (~91 MB) is needed by the tests; the service test points the
       # re-ranker at a missing path on purpose to check the 503.
       - name: Cache bi-encoder model
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .hf-cache
           key: hf-all-MiniLM-L6-v2-v1

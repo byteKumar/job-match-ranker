@@ -1,5 +1,7 @@
 # job-match-ranker
 
+[![tests](https://github.com/byteKumar/job-match-ranker/actions/workflows/tests.yml/badge.svg)](https://github.com/byteKumar/job-match-ranker/actions/workflows/tests.yml)
+
 Semantic resume-to-job ranking with an honest evaluation. Given a resume, rank job postings by
 fit. The project measures how much learned ranking beats keyword matching: keyword overlap
 (PepperUni-style) and BM25 baselines vs a sentence-transformer bi-encoder with FAISS, a
@@ -78,7 +80,14 @@ curl -s localhost:8010/rank -H 'content-type: application/json' \
 
 `fix_libomp.sh` points faiss at torch's OpenMP runtime so only one copy loads. Without it, any
 process that runs torch on the CPU and imports faiss dies with `OMP: Error #15` (or hangs).
-`KMP_DUPLICATE_LIB_OK=TRUE` is not used: OpenMP documents it as unsafe.
+`KMP_DUPLICATE_LIB_OK=TRUE` is not used: OpenMP documents it as unsafe. On Linux, faiss and
+torch load together without the fix (CI checks this).
+
+CI (`.github/workflows/tests.yml`, ubuntu-latest, CPU-only torch) downloads the data and the
+bi-encoder, rebuilds the labeled sets, checks they match the committed `dataset_stats.json`,
+and runs all 36 tests. `JOBMATCH_STRICT_TESTS=1` makes any skipped test fail. Locally, the data
+and model tests skip until `prepare_data.py` has run and the model is downloaded. CI does not
+re-run the evaluations or benchmarks.
 
 ## Data and licenses (data, weights and indexes are not committed)
 

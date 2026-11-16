@@ -146,5 +146,9 @@ another project's notes show a benchmark in that window.
 - Fine-tuned checkpoints for seeds 1 and 2 were deleted after evaluation to save disk; re-create
   them with `scripts/train_crossencoder.py --seed 1` / `--seed 2`.
 - No MLflow; experiment tracking is this table plus JSON files in `results/`.
-- GitHub Actions is disabled on the account (billing lock), so no CI ran; tests were run locally
-  (36 passed).
+- CI (`.github/workflows/tests.yml`, added after the measurements above) runs on ubuntu-latest
+  with CPU-only PyTorch. It downloads the two datasets and the bi-encoder, rebuilds the labeled
+  sets, checks that `results/dataset_stats.json` comes out identical on Linux, and runs all
+  36 tests. Any skipped test fails the run. First green run:
+  https://github.com/byteKumar/job-match-ranker/actions/runs/43928519348. CI does not run
+  the evaluations, the training or the latency benchmark; every number above comes from the Mac.
