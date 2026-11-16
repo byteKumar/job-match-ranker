@@ -16,7 +16,7 @@ Full write-up, error analysis and raw outputs: [RESULTS.md](RESULTS.md).
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph prep["Data prep"]
         R["Resumes<br/>2,481, HTML"] --> C["Clean, parse sections,<br/>de-duplicate jobs"]
         J["LinkedIn postings<br/>29,855 after cleaning"] --> C
