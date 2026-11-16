@@ -1,0 +1,35 @@
+{
+  "health": {
+    "jobs": 10000,
+    "device": "cpu",
+    "reranker": true
+  },
+  "client": "1 sequential client, httpx keep-alive",
+  "server": "uvicorn 1 worker, CPU",
+  "machine": "macOS-26.6.2-arm64-arm-64bit",
+  "retrieval_only": {
+    "requests": 1000,
+    "p50_ms": 31.28,
+    "p99_ms": 776.32,
+    "mean_ms": 80.67,
+    "max_ms": 2605.57,
+    "server_stage_median_ms": {
+      "embed": 27.92,
+      "search": 0.58,
+      "total": 29.39
+    }
+  },
+  "retrieval_plus_rerank50": {
+    "requests": 300,
+    "p50_ms": 1947.38,
+    "p99_ms": 7071.14,
+    "mean_ms": 2376.2,
+    "max_ms": 8587.2,
+    "server_stage_median_ms": {
+      "embed": 20.21,
+      "search": 0.54,
+      "rerank": 1923.75,
+      "total": 1945.56
+    }
+  }
+}

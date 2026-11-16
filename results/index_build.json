@@ -1,0 +1,12 @@
+{
+  "jobs": 10000,
+  "device": "mps",
+  "torch_threads": 4,
+  "dim": 384,
+  "index_type": "IndexFlatIP (exact)",
+  "embed_seconds": 45.42,
+  "faiss_add_and_write_seconds": 0.009,
+  "build_seconds_total": 45.43,
+  "index_file_mb": 15.36,
+  "jobs_metadata_mb": 22.67
+}

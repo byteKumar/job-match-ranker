@@ -1,0 +1,23 @@
+{
+  "health": {
+    "jobs": 10000,
+    "device": "cpu",
+    "reranker": true
+  },
+  "client": "1 sequential client, httpx keep-alive",
+  "server": "uvicorn 1 worker, CPU",
+  "machine": "macOS-26.6.2-arm64-arm-64bit",
+  "retrieval_plus_rerank50": {
+    "requests": 300,
+    "p50_ms": 1613.05,
+    "p99_ms": 2726.02,
+    "mean_ms": 1679.0,
+    "max_ms": 6151.63,
+    "server_stage_median_ms": {
+      "embed": 17.02,
+      "search": 0.54,
+      "rerank": 1592.45,
+      "total": 1611.68
+    }
+  }
+}
