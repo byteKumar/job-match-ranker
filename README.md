@@ -17,3 +17,15 @@ Status: work in progress, built milestone by milestone. Results will be in `RESU
   `xanderios/linkedin-job-postings` (2023 snapshot, `job_postings.csv`).
 
 Datasets, model weights and indexes stay out of git.
+
+## Setup (macOS, Apple Silicon, Python 3.12)
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/pip install --no-cache-dir -r requirements.txt
+scripts/fix_libomp.sh   # faiss-cpu and torch each bundle libomp; loading both aborts or hangs
+```
+
+`fix_libomp.sh` points faiss at torch's OpenMP runtime so only one copy loads. Without it,
+any process that runs torch on the CPU and imports faiss dies with `OMP: Error #15`.
+`KMP_DUPLICATE_LIB_OK=TRUE` is not used: OpenMP documents it as unsafe.
